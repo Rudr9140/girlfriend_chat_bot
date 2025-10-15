@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="chat-header">
+            <h1>💕 Your Girlfriend</h1>
+            <button id="clearBtn" class="clear-btn">Clear Chat</button>
+        </div>
+        
+        <div class="chat-box" id="chatBox">
+            <div class="welcome-message">
+                <h2>Hey baby! 🥰</h2>
+                <p>I've been waiting to talk to you! How's your day going, love?</p>
+            </div>
+        </div>
+        
+        <div class="input-area">
+            <form id="chatForm">
+                <input 
+                    type="text" 
+                    id="userInput" 
+                    placeholder="Type your message here..." 
+                    autocomplete="off"
+                    required
+                >
+                <button type="submit" id="sendBtn">
+                    <span id="sendText">Send</span>
+                    <span id="loadingText" style="display: none;">...</span>
+                </button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
